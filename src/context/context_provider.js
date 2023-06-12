@@ -12,6 +12,7 @@ export const ContextProvider = ({ children }) => {
             return LANGUAGE[1];
         }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const language = useMemo(() => handleLang(), [lang]);
     
     return (

@@ -1,13 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { useLoader, useFrame, useThree } from "@react-three/fiber";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { SpotLight } from "@react-three/drei";
-import { useControls } from "leva";
 import '../styles/component.css'
-import { Hidden } from "@mui/material";
 import ScrollDown from "./ScrollDown";
 
 //initial state of spot light controls
@@ -25,6 +20,7 @@ const x = 97,
 const color = "#157b8d";
 
 const LucyModel = () => {
+  // eslint-disable-next-line no-undef
   const gltf = useLoader(GLTFLoader, "/models/Lucy100k.gltf");
   const model = gltf.scene;
   const { camera } = useThree();
@@ -59,7 +55,6 @@ const LucyModel = () => {
 export default function Main() {
   const spotLightRef = React.useRef();
   const lightHelperRef = React.useRef();
-  const planeRef = React.useRef();
   const [textures, setTextures] = React.useState(null);
 
   React.useEffect(() => {

@@ -7,7 +7,7 @@ const Casestudy = (props) => {
             <div className='w-[5%]'></div>
             <div className="md:w-[30%] flex items-center mr-4 justify-center flex-row" >
             
-                <img className='w-2/5 h-[90%]' src={props.img} alt="image" />
+                <img className='w-2/5 h-[90%]' src={props.img} alt="" />
                 
 
             </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,7 +6,7 @@ import "../styles/component.css"
 import Casestudy from "./Casestudy";
 import { CAROUSEL_DATA } from "../Data/InputData";
 
-import { Autoplay, Navigation } from "swiper";
+import { Navigation } from "swiper";
 
 function Carousel() {
   return (

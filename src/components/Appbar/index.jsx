@@ -57,6 +57,7 @@ const Appbar = () => {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <PrimaryAppbar style={animateSecondaryHeader} />;
