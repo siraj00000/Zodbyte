@@ -64,7 +64,7 @@
   display: inline-block;
   padding: 10px 20px;
   color: white;
-  background:#2B3241;
+  background: #2b3241;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -73,11 +73,11 @@
   letter-spacing: 4px;
 }
 .login-box a:hover {
-  background: #2B3241;
+  background: #2b3241;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #2B3241, 0 0 25px #2B3241, 0 0 50px #2B3241,
-    0 0 100px #2B3241;
+  box-shadow: 0 0 5px #2b3241, 0 0 25px #2b3241, 0 0 50px #2b3241,
+    0 0 100px #2b3241;
 }
 .login-box a span {
   position: absolute;
@@ -206,8 +206,8 @@
   text-shadow: 0;
   width: 13px;
   height: 13px;
-  border-bottom: 2px solid ;
-  border-right: 2px solid ;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
   z-index: 9;
   left: 50%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
@@ -218,8 +218,8 @@
   animation: fade_move_down 4s ease-in-out infinite;
 }
 
-
-/animated scroll arrow animation/ @-webkit-keyframes fade_move_down {
+/* animated scroll arrow animation */
+@-webkit-keyframes fade_move_down {
   0% {
     -webkit-transform: translate(0, -10px) rotate(45deg);
     opacity: 0;
@@ -259,8 +259,6 @@
   }
 }
 
-@-webkit-keyframes {
-}
 @-webkit-keyframes extend {
   0% {
     width: 300px;
@@ -313,13 +311,11 @@
     width: 50px;
     height: 50px;
     border-radius: 100px;
-    margin-left:130px;
-    margin-right:auto;
-    
+    margin-left: 130px;
+    margin-right: auto;
   }
 }
-@-webkit-keyframes {
-}
+
 @-webkit-keyframes disappear {
   0% {
     opacity: 1;
@@ -342,8 +338,7 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes {
-}
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -379,7 +374,7 @@
   max-width: 500px;
   width: 100%;
   height: 50px;
-  color:#6dad7d;
+  color: #6dad7d;
   /*border-radius*/
   border-radius: 10px;
   background: #d9d9d9;
@@ -389,7 +384,6 @@
 
 .submit-btn > span {
   font-size: 20px;
-  color: ;
 }
 
 .submit-img {
@@ -434,25 +428,16 @@
   animation-fill-mode: forwards;
 }
 
-
-
-
-
-
-
 .drop-in {
   animation: drop-in 1200ms ease 200ms backwards;
- }
- 
- .drop-in-2 {
-  delay:1200ms;
-  animation: drop-in 2000ms ease 500ms backwards;
- }
- .drop-in-3 {
-  delay:1200ms;
-  animation: drop-in 2500ms ease 500ms backwards;
- }
+}
 
+.drop-in-2 {
+  animation: drop-in 2000ms ease 500ms backwards;
+}
+.drop-in-3 {
+  animation: drop-in 2500ms ease 500ms backwards;
+}
 
 @keyframes drop-in {
   from {
@@ -475,7 +460,6 @@
   font-size: 18px;
   background: #fff;
 
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -485,15 +469,15 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  
+
   object-fit: cover;
 }
-.carousel-div::after{
-  content: '';
+.carousel-div::after {
+  content: "";
   backdrop-filter: blur(15px);
 }
-.carousel-div::before{
-  content: 'Updated Soon';
+.carousel-div::before {
+  content: "Updated Soon";
   backdrop-filter: blur(0px);
 }
 
@@ -504,87 +488,79 @@
 }
 .contact-card {
   background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3, 43%, #4e00c2);
-    opacity: 1;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-  transition: opacity .5s;
+    var(--rotate),
+    #5ddcff,
+    #3c67e3,
+    43%,
+    #4e00c2
+  );
+  opacity: 1;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  transition: opacity 0.5s;
   animation: spin 5s linear infinite;
-  
 }
 
 @keyframes spin {
   0% {
     --rotate: 0deg;
- 
-    box-shadow: 
-    0 0 10px #4e00c2,
-    0 0 25px #3c67e3,
-    0 0 50px #5ddcff;
+
+    box-shadow: 0 0 10px #4e00c2, 0 0 25px #3c67e3, 0 0 50px #5ddcff;
   }
   100% {
     --rotate: 360deg;
-  
-    box-shadow: 0 0 5px  ,
-    0 0 10px #3c67e3,
-    0 0 25px #5ddcff ,
-    0 0 50px #4e00c2;
+
+    box-shadow: 0 0 5px, 0 0 10px #3c67e3, 0 0 25px #5ddcff, 0 0 50px #4e00c2;
   }
 }
 
-
-.wave-section{
+.wave-section {
   background: linear-gradient(-45deg, #ee5425, #e71364, #089acf, #0bcea0);
   background-size: 400% 400%;
   animation: gradient-bg 15s ease infinite;
 }
-@keyframes gradient-bg
-{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
-
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-.wave{
-  background: url('https://github.com/animation-coding/css-wave/raw/master/wave.png');
+.wave {
+  background: url("https://github.com/animation-coding/css-wave/raw/master/wave.png");
   background-size: 1000px 100px;
   z-index: 1;
   animation: animate1 25s linear infinite;
 }
-.wave:nth-child(2){
+.wave:nth-child(2) {
   animation: animate2 15s linear infinite;
   animation-delay: -5s;
-  opacity:0.5;
+  opacity: 0.5;
 }
-.wave:nth-child(3){
-  animation: animate1 30s cubic-bezier(.55, .5,.45,.5) infinite;
+.wave:nth-child(3) {
+  animation: animate1 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
   animation-delay: -5s;
-  opacity:0.2;
+  opacity: 0.2;
 }
 
-@keyframes animate1
-{
-   0%{
-       background-position-x: 0;
-   }
-   100%{
-       background-position-x: 1000px;
-   }
+@keyframes animate1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
 }
-@keyframes animate2
-{
-   0%{
-       background-position-x: 0;
-   }
-   100%{
-       background-position-x: -1000px;
-   }
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
 }

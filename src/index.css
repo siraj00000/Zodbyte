@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -50,15 +50,14 @@ code {
   src: url("../src/fonts/TESLA.ttf  ");
 }
 
-.carousel_img {  
-   user-drag: none;  
-   user-select: none;
-   -moz-user-select: none;
-   -webkit-user-drag: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
+.carousel_img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-.topbottom-spacing{
+.topbottom-spacing {
   padding: 49px 0;
 }
