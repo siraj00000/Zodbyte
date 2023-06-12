@@ -4,6 +4,7 @@ import { useLoader, useFrame, useThree } from "@react-three/fiber";
 import { Canvas } from "@react-three/fiber";
 import '../styles/component.css'
 import ScrollDown from "./ScrollDown";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 //initial state of spot light controls
 const map = "disturb.jpg";
