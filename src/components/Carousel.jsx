@@ -5,14 +5,15 @@ import "swiper/css/navigation";
 import "../styles/component.css"
 import Casestudy from "./Casestudy";
 import { CAROUSEL_DATA } from "../Data/InputData";
+import { SwiperNavButtons } from "./SwiperNavButtons";
 
-import { Navigation } from "swiper";
+import {A11y, Navigation, Pagination } from "swiper";
 
 function Carousel() {
   return (
     <>
-      <Swiper navigation={true} modules={[Navigation]}
-        className="mySwiper ">
+      <Swiper  modules={[A11y, Navigation, Pagination ]}
+        className="mySwiper relative">
         
         {CAROUSEL_DATA.map((input, index) => (
           <SwiperSlide>
@@ -21,7 +22,10 @@ function Carousel() {
           {...input}
           
           className=""/>
-      </SwiperSlide>
+          
+        <SwiperNavButtons/>
+        </SwiperSlide>
+      
         ))}
       </Swiper>
     </>

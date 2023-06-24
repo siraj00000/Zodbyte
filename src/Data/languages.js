@@ -24,19 +24,19 @@ const LANGUAGE = [
                 section3: {
                     title: "Solution we offer",
                     tag1: {
-                        title: "The Future",
+                        title: "THE FUTURE",
                         des: "Industry kept methods that guarantee success. Industry kept methods that guarantee success.",
-                        buttonText: "read now"
+                        buttonText: "READ NOW"
                     },
                     tag2: {
-                        title: "Delivered",
+                        title: "DELIVERED",
                         des: "Industry kept methods that guarantee success. Industry kept methods that guarantee success.",
-                        buttonText: "read now"
+                        buttonText: "READ NOW"
                     },
                     tag3: {
-                        title: "Seamlessly",
+                        title: "SEAMLESSLY",
                         des: "Industry kept methods that guarantee success. Industry kept methods that guarantee success.",
-                        buttonText: "read now"
+                        buttonText: "READ NOW"
                     },
                 },
                 section4: {

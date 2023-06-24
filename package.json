@@ -8,7 +8,7 @@
     "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
-    "@mui/material": "^5.13.4",
+    "@mui/material": "^5.13.5",
     "@react-three/drei": "^9.66.1",
     "@react-three/fiber": "^8.13.0",
     "@testing-library/jest-dom": "^5.14.1",

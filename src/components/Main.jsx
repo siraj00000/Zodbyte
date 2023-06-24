@@ -2,9 +2,13 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { useLoader, useFrame, useThree } from "@react-three/fiber";
 import { Canvas } from "@react-three/fiber";
-import '../styles/component.css'
-import ScrollDown from "./ScrollDown";
+// import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// import { SpotLight } from "@react-three/drei";
+// import { useControls } from "leva";
+import '../styles/component.css'
+// import { Hidden } from "@mui/material";
+import ScrollDown from "./ScrollDown";
 
 //initial state of spot light controls
 const map = "disturb.jpg";
@@ -21,7 +25,6 @@ const x = 97,
 const color = "#157b8d";
 
 const LucyModel = () => {
-  // eslint-disable-next-line no-undef
   const gltf = useLoader(GLTFLoader, "/models/Lucy100k.gltf");
   const model = gltf.scene;
   const { camera } = useThree();
@@ -56,6 +59,7 @@ const LucyModel = () => {
 export default function Main() {
   const spotLightRef = React.useRef();
   const lightHelperRef = React.useRef();
+  // const planeRef = React.useRef();
   const [textures, setTextures] = React.useState(null);
 
   React.useEffect(() => {
@@ -118,7 +122,7 @@ export default function Main() {
   };
 
   return (
-    <div className="h-[130vh] sm:h-[130vh] md:h-[100vh]"
+    <div className="h-[130vh] sm:h-[130vh] md:h-[105vh]"
       style={{
   
 
@@ -179,7 +183,7 @@ export default function Main() {
         <span  
           style={{
             overflow: "hidden",
-            minHeight:"40px",
+            minHeight:"50px",
             height: "auto",
             
           }}
@@ -199,19 +203,18 @@ export default function Main() {
             
           }}
         ><p style={{
-          fontSize: "70px",
+          
           lineHeight: "80px",
           marginBottom: "0.5rem",
-        }} className="drop-in-2 font-[yeezy-tstar-700]">
+        }} className="drop-in-2 text-[60px] md:text-[70px] font-[yeezy-tstar-700]">
           Your Vision,
         <br /> </p></span>
         <span style={{
             overflow: "hidden",
             minHeight: "90px",
           }} >
-        <p className="drop-in-3 font-[yeezy-tstar-700]
+        <p className="drop-in-3  text-[60px] md:text-[70px] font-[yeezy-tstar-700]
         " style={{
-          fontSize: "70px",
           lineHeight: "80px",
           marginBottom: "1rem",
         }}>
@@ -220,21 +223,49 @@ export default function Main() {
         </span>
         <span 
           style={{
-            minHeight:"60px",
-            overflow:"hidden",
+            minHeight:"100px",
+            
           }}
         >
          <p style={{
-            marginTop:"1rem",
-            font: "32px",
-            lineHeight: "20px",
+            
             
           }}
-           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions <br /> to bring your business to the next
+           className="drop-in-3  font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
+          level </p>
+         <p style={{
+            
+            
+          }}
+           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
+          level </p>
+         <p style={{
+            
+            
+          }}
+           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
+          level </p>
+         <p style={{
+            
+            
+          }}
+           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
+          level </p>
+         <p style={{
+            
+            
+          }}
+           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
+          level </p>
+         <p style={{
+            
+            
+          }}
+           className="drop-in-3 font-[yeezy-tstar-700]"> Digitally Crafted solutions to bring your business to the next
           level </p>
         </span>
 
-      <div className="mt-12 relative max-w-sm md:max-w-md w-full text-white hover:bg-[#2B3241] rounded-[10px]" id="a">
+      <div className="max-sm:mt-48 mt-16 relative max-w-sm md:max-w-md w-full text-white  rounded-[10px]" id="a">
         <button className="h-auto mx-auto w-full  z-10 relative py-4">
           <span className='text-xl font-semibold font-[yeezy-tstar-700]'>SPEAK TO OUR TEAM TODAY</span><br />
           <span className='text-sm font-[yeezy-tstar-700]'>SPEAK TO OUR TEAM TODAY</span>
@@ -242,6 +273,9 @@ export default function Main() {
       </div>
       </div>
       <ScrollDown borderColor={'text-white'}/>
-    </div>
+</div>      
+
+      
+    
   );
 }

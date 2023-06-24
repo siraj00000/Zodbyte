@@ -1,11 +1,14 @@
 import React from "react";
-import WaveSection from "./WaveSection";
+// import WaveSection from "./WaveSection";
 import statue1 from "../assets/statuedarkquantized1.png";
+import StripeGradient from './StripeGradient'
+
 
 const Footer = () => {
   return (
     <>
-    <WaveSection/>
+    {/* <WaveSection/> */}
+    <StripeGradient/>
     <footer className="">
       <section className="md:block hidden w-full md:px-[8%] pt-[39px] pb-10 justify-center relative overflow-hidden
       bg-[#5E6C8C]">

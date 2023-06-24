@@ -19,13 +19,13 @@ export const INPUT_DATA = [
         name: 'email',
         type: 'email',
         placeholder: 'EMAIL',
-        required: true
+        
     },
     {
         name: 'subject',
         type: 'text',
         placeholder: 'SUBJECT',
-        required: true
+        
     }
 ];
 

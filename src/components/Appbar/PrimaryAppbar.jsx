@@ -1,36 +1,25 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Logo from "../../assets/header logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useStateContext } from "../../context/context_provider";
 
 import { animated } from "react-spring";
 import { HashLink } from "react-router-hash-link";
 
+
 const PrimaryAppbar = (props) => {
-  const { language } = useStateContext();
   const [visibility, setVisibility] = useState(false);
-  const {
-    content: { appbar },
-  } = language;
+
   return (
     <animated.header
       {...props}
-      className="fixed w-full z-50 bg-white h-[100px]"
+      className="fixed w-full z-50 bg-white"
     >
-      <nav className="flex md:items-center  lg:max-w-full items-start md:flex-row w-full shadow-md py-2 lg:px-[24px]  h-[100%]">
+      <nav className="flex md:items-center  lg:max-w-full items-start md:flex-row w-full shadow-md  lg:px-[24px]  h-[100%] bg-white">
         {/* brand */}
-        <HashLink
-          smooth
-          to={"/#"}
-          className="flex my-auto lg:ms-24 w-1/2 lg:w-1/4 items-center cursor-pointer"
-        >
-          <img src={Logo} alt="Logo" width={"100%"} />
-          {/* <img src={LogoText} width={'50%'} alt="LogoText" /> */}
-          {/* <p className="font-tesla text-[2B3241] text-4xl">Zodbyte</p> */}
+        <HashLink smooth to={"/#"} className="flex  lg:ms-24 w-1/2 lg:w-1/4 h-full items-center relative cursor-pointer">
+          <img className="absolute bottom-0" src={Logo} alt="Logo" width={'auto'} height={''} />
         </HashLink>
-        {/* <div className="flex items-center cursor-pointer">
-        </div> */}
+       
         {/* menu desktop*/}
         <div className="lg:flex flex-2 items-center justify-end w-3/4 border-1 gap-6 hidden">
           <HashLink
@@ -38,14 +27,14 @@ const PrimaryAppbar = (props) => {
             to={"/#service"}
             className={"font-[yeezy-tstar-700] text-[24px] leading-[39px]"}
           >
-            {appbar.itemOne}
+            About
           </HashLink>
           <HashLink
             smooth
-            to={"/#contact-us"}
-            className={"font-[yeezy-tstar-700] text-[24px] leading-[39px]"}
+            to={"/#service"}
+            className={"font-[yeezy-tstar-700] text-[24px] flex items-center  leading-[39px]"}
           >
-            {appbar.itemTwo}
+            Services <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </HashLink>
           <HashLink
             smooth
@@ -61,7 +50,7 @@ const PrimaryAppbar = (props) => {
           >
             {"Insights"}
           </HashLink>
-
+          
           <div className="login-box  flex justify-center items-center">
             <form>
               <a href="/" className=" font-[yeezy-tstar-700] text-[20px] ">
@@ -73,14 +62,6 @@ const PrimaryAppbar = (props) => {
               </a>
             </form>
           </div>
-          {/* <h6
-            className={
-              "font-[yeezy-tstar-700] text-[20px] leading-[24px] cursor-pointer uppercase"
-            }
-          >
-            {appbar.langTag}
-          </h6>
-          <LangDrop onToggleLang={toggleLanguage} /> */}
         </div>
       </nav>
 
@@ -101,10 +82,10 @@ const PrimaryAppbar = (props) => {
         <HashLink
           smooth
           to={"/#service"}
-          className={"font-[yeezy-tstar-700] text-[20px] leading-[24px]"}
+          className={"font-[yeezy-tstar-700] flex text-[20px] leading-[24px]"}
           onClick={() => setVisibility(false)}
         >
-          Service
+          Service <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </HashLink>
         <HashLink
           smooth
@@ -130,16 +111,7 @@ const PrimaryAppbar = (props) => {
         >
           Insights
         </HashLink>
-
-        {/* lang converter */}
-        {/* <h6
-          onClick={toggleLanguageMob}
-          className={
-            "font-[yeezy-tstar-700] text-[20px] leading-[24px] cursor-pointer"
-          }
-        >
-          {appbar.langTag}
-        </h6> */}
+       
         <HashLink
           smooth
           to={"/#contact-us"}
@@ -148,8 +120,7 @@ const PrimaryAppbar = (props) => {
         >
           <div className="login-box  flex ">
             <form>
-              {/* // eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#" className="font-[yeezy-tstar-700]  ">
+              <a href="/" className=" font-[yeezy-tstar-700]">
                 <span></span>
                 <span></span>
                 <span></span>

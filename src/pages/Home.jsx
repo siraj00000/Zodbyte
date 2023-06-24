@@ -13,6 +13,7 @@ import {
 import Carousel from "../components/Carousel";
 import ScrollDown from "../components/ScrollDown";
 import TextField from "@mui/material/TextField";
+
 const Home = () => {
   const { language } = useStateContext();
   const [values, setValues] = useState(INPUT_SCHEMA);
@@ -46,10 +47,10 @@ const Home = () => {
   };
 
   return (
-    <main className="bg-white pt-[100px] w-full overflow-x-hidden ">
+    <main className="bg-white pt-[80px] w-full overflow-x-hidden ">
       {/* Section 01 */}
       <Main />
-      <section className="md:p-[5%] md:pt-[5%] max-md:py-[8%] w-full max-w-[1600px] mx-auto">
+      <section className="md:p-[5%] md:pt-[5] max-md:py-[8%] w-full max-w-[1600px] mx-auto">
         <div id="service" className="md:h-[25px]"></div>
         <h2 className="font-[yeezy-tstar-700] md:text-left text-center text-[34px]  leading-[39px] sm:leading-[34px] w-full md:mb-[30px]">
           {section3.title}
@@ -117,13 +118,9 @@ const Home = () => {
         </div>
       </section> */}
       <div className="w-full   overflow-hidden">
-        <section className="my-10  after:z-10 after:absolute relative after:top-0 after:h-full after:w-full before:absolute before:z-10 before:text-4xl before:font-bold before:text-white before:top-1/2 before:left-1/2 carousel-div">
+        <section className="my-10">
           <Carousel />
-          <div className="absolute top-1/2 left-[43.333%] z-50  ">
-            <p className="text-white  font-[yeezy-tstar-700] font-bold text-4xl shadow-lg">
-              Updated Soon
-            </p>{" "}
-          </div>
+          {/* <div className='absolute top-1/2 left-[43.333%] z-50  '><p className="text-white  font-[yeezy-tstar-700] font-bold text-4xl shadow-lg">Updated Soon</p> </div> */}
         </section>
       </div>
       {/* Section 02 & 03 */}
@@ -156,7 +153,7 @@ const Home = () => {
         <section className="md:p-[5%] md:pt-[5%] max-md:py-[8%] w-full max-w-[1600px] mx-auto">
           <div id="service" className="md:h-[25px]"></div>
           <h2 className="font-[yeezy-tstar-700] md:text-left text-center text-[34px]  leading-[39px] sm:leading-[34px] w-full md:mb-[30px]">
-            {section3.title}
+            Our Latest Insights
           </h2>
 
           <div className="flex max-md:flex-col justify-center gap-4 ">
@@ -190,123 +187,125 @@ const Home = () => {
       </div>
       <div className="w-full relative my-4 text-center">
         <div className="h-1 w-48 mx-auto border-2 my-8 border-black"></div>
-        <h2 className="relative mb-5 font-[yeezy-tstar-700] md:text-[40px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
+        <h2 className="relative  font-[yeezy-tstar-700] md:text-[40px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center w-full">
           Ready To collaborate?
         </h2>
-        <div className="h-5"></div>
-        <ScrollDown borderColor={"text-black "} />
+        <div className="mb-5 h-16">
+          <ScrollDown borderColor={"text-black "} />
+        </div>
       </div>
       {/* Section 04 */}
-      <section className="pt-[30px] pb-[49px] gap-10 w-full">
+      <section className="pt-[30px] bg-[#212534] gap-10 w-full">
         <div id="contact-us" className="h-10"></div>
-        <div className="flex flex-wrap md:flex-row flex-col items-top justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-[1200px] mx-auto">
-          <div className="w-full flex-1 h-auto max-md:px-[8%]">
-            <h2 className="font-[yeezy-tstar-700]  md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
-              {section4.subSec1.title}
-            </h2>
-            <div className="bg-[#283241] overflow-hidden  p-2 rounded-lg max-h-[870px] md:max-h-[870px] lg:max-h-[850px] contact-card">
-              <Calendy />
-            </div>
-          </div>
-          <div className="w-full border-t-[1px] my-2 md:hidden block"></div>
-          <div className="flex-1 w-full max-md:px-[8%]">
-            <div className="h-[70%]">
-              <h2 className="font-[yeezy-tstar-700] md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5">
-                {section4.subSec2.formtitle}
+        <div className="max-w-7xl p-2 mx-auto">
+          <div className="flex flex-wrap md:flex-row flex-col  items-top justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-7xl px-4 py-8 mx-auto">
+            <div className="flex-1  mx-auto h-auto ">
+              <h2 className="font-[yeezy-tstar-700] text-white md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
+                {section4.subSec1.title}
               </h2>
+              <div className="bg-[#283241] overflow-hidden  p-2 rounded-lg max-h-[870px] md:max-h-[870px] lg:max-h-[850px] contact-card">
+                <Calendy />
+              </div>
+            </div>
+            <div className="w-full border-t-[1px] my-2 md:hidden block"></div>
+            <div className="flex-1 w-full max-md:px-[8%]">
+              <div className="h-[70%]">
+                <h2 className="font-[yeezy-tstar-700] text-white mb-9 md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5">
+                  {section4.subSec2.formtitle}
+                </h2>
 
-              <div className="bg-[#283241] flex justify-center items-center p-2 min-h-4xl rounded-lg contact-card">
-                <form
-                  ref={form}
-                  onSubmit={sendEmail}
-                  className="bg-white   h-[90%] md:px-5 px-10 py-24    max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2  justify-between "
-                >
-                  {INPUT_DATA_1.map((input, index) => (
-                    <TextField
-                      id="outlined-basic"
-                      label="Full Name"
-                      variant="outlined"
-                      key={index}
-                      {...input}
-                      value={values[input.name]}
-                      onChange={onChange}
-                      className="bg-gray-100 border-black border-2 my-4"
-                    />
-                  ))}
-                  <div className="flex my-5 flex-wrap gap-3 lg:gap-5">
-                    {INPUT_DATA.map((input, index) => (
+                <div className="bg-[#283241] flex justify-center items-center p-2 min-h-4xl rounded-lg contact-card">
+                  <form
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="bg-[#191c29]   h-[90%] md:px-5 px-10 py-24    max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2  justify-between "
+                  >
+                    {INPUT_DATA_1.map((input, index) => (
                       <TextField
                         id="outlined-basic"
-                        label={section4.subSec2.form[input.name]}
+                        label="Full Name"
                         variant="outlined"
                         key={index}
                         {...input}
-                        placeholder={input.placeholder}
                         value={values[input.name]}
                         onChange={onChange}
-                        className="w-[48%]  px-4  my-4 bg-gray-100"
+                        className="bg-gray-300   border-black border-2 my-4"
                       />
                     ))}
-                  </div>
-                  {TEXTAREA_DATA.map((input, index) => (
-                    <TextField
-                      id="outlined-multiline-static"
-                      label="Tell us about your project"
-                      multiline
-                      rows={4}
-                      defaultValue="Default Value"
-                      key={index}
-                      {...input}
-                      value={values[input.name]}
-                      onChange={onChange}
-                      className="w-[100%]     bg-gray-100 "
-                    />
-                  ))}
-
-                  <div class="cont w-[100px] md:w-[310px]">
-                    <button class="submit-btn mx-auto left-0 right-0 my-4">
-                      <span>Submit</span>
-                      <img
-                        class="submit-img"
-                        src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png"
-                        borderColor="black"
-                        height="62"
-                        width="62"
-                        alt=""
+                    <div className="flex my-5 flex-wrap gap-3 lg:gap-5">
+                      {INPUT_DATA.map((input, index) => (
+                        <TextField
+                          id="outlined-basic"
+                          label={section4.subSec2.form[input.name]}
+                          variant="outlined"
+                          key={index}
+                          {...input}
+                          placeholder={input.placeholder}
+                          value={values[input.name]}
+                          onChange={onChange}
+                          className="md:w-[48%]  md:px-4  my-4 bg-gray-300  "
+                        />
+                      ))}
+                    </div>
+                    {TEXTAREA_DATA.map((input, index) => (
+                      <TextField
+                        id="outlined-multiline-static"
+                        label="Tell us about your project"
+                        multiline
+                        rows={4}
+                        defaultValue="Default Value"
+                        key={index}
+                        {...input}
+                        value={values[input.name]}
+                        onChange={onChange}
+                        className="w-[100%]     bg-gray-300  "
                       />
-                    </button>
-                  </div>
-                </form>
+                    ))}
+
+                    <div class="cont w-[100px] md:w-[310px]">
+                      <button class="submit-btn mx-auto left-0 right-0 my-4">
+                        <span>Submit</span>
+                        <img
+                          class="submit-img"
+                          src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png"
+                          borderColor="black"
+                          height="62"
+                          width="62"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </div>
-            <div className="h-8"></div>
-            <div className="h-[30%]">
-              <h2 className="font-[yeezy-tstar-700] md:text-[20px] max-md:text-[18px] max-md:text-center text-[20px] md:leading-[22px] leading-[22px]">
-                We’re not just a marketing agency. We’re an extension of your
-                team that integrates seamlessly with the other arms of your
-                business, driving profound impact on your bottom line without
-                creating more work.
-                <br />
-                <br />
-                We’re not just a marketing agency. We’re an extension of your
-                team that integrates seamlessly with the other arms of your
-                business, driving profound impact on your bottom line without
-                creating more work.
-              </h2>
-              {/* <h2 className="font-[yeezy-tstar-700] md:text-[50px] max-md:text-[45px] max-md:text-center text-[32px] md:leading-[66px] leading-[39px] pt-2">
+              <div className="h-8"></div>
+              <div className="h-[30%]">
+                <h2 className="font-[Alpina] text-white md:text-[20px] max-md:text-[18px] max-md:text-center text-[20px] md:leading-[22px] leading-[22px]">
+                  We’re not just a marketing agency. We’re an extension of your
+                  team that integrates seamlessly with the other arms of your
+                  business, driving profound impact on your bottom line without
+                  creating more work.
+                  <br />
+                  <br />
+                  We’re not just a marketing agency. We’re an extension of your
+                  team that integrates seamlessly with the other arms of your
+                  business, driving profound impact on your bottom line without
+                  creating more work.
+                </h2>
+                {/* <h2 className="font-[yeezy-tstar-700] md:text-[50px] max-md:text-[45px] max-md:text-center text-[32px] md:leading-[66px] leading-[39px] pt-2">
                 {section4.subSec2.demoCall}
               </h2> */}
-              {/* <p className="font-[yeezy-tstar-700] text-[21px] max-md:text-[18px] leading-[22px] max-md:text-center md:m-0 my-8 md:my-3">
+                {/* <p className="font-[yeezy-tstar-700] text-[21px] max-md:text-[18px] leading-[22px] max-md:text-center md:m-0 my-8 md:my-3">
                 {section4.subSec2.para}
               </p>
               <p className="font-[yeezy-tstar-700] text-[21px] max-md:text-[18px] leading-[22px] max-md:text-center md:m-0 mb-8 md:mt-5">
                 {section4.subSec2.para2}
               </p> */}
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <Carousel />
     </main>
   );
 };

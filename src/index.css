@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 * {
   box-sizing: border-box;
@@ -37,27 +42,29 @@ code {
   background: #2a1b3ba1;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @font-face {
   font-family: "yeezy-tstar-700";
-  src: url("../src/fonts/GT-Alpina-Standard-Regular-Trial.otf");
+  src: url("../src/fonts/Helvetica Neue Medium Extended.ttf");
 }
 @font-face {
   font-family: "TESLA";
   src: url("../src/fonts/TESLA.ttf  ");
 }
-
-.carousel_img {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+@font-face {
+  font-family: "Alpina";
+  src: url("../src/fonts/GT-Alpina-Standard-Regular-Trial.otf  ");
 }
 
-.topbottom-spacing {
+.carousel_img {  
+   user-drag: none;  
+   user-select: none;
+   -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}
+
+.topbottom-spacing{
   padding: 49px 0;
 }

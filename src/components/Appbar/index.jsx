@@ -9,10 +9,10 @@ export const ScrollDirection = {
 
 const Appbar = () => {
   const [animateSecondaryHeader, setAnimateSecondaryHeader] = useSpring(() => ({
-    height: 100,
+    height: 80,
     top: 0,
   }));
-  const threshold = 100;
+  const threshold = 80;
 
   useEffect(() => {
     let previousScrollYPosition = window.scrollY;
@@ -35,13 +35,13 @@ const Appbar = () => {
 
         if (newScrollDirection === "up") {
           setAnimateSecondaryHeader({
-            height: 100,
+            height: 80,
             top: 0,
           });
         } else if (newScrollDirection === "down" && window.scrollY) {
           setAnimateSecondaryHeader({
-            height: window.scrollY < 400 ? 100 : 0,
-            top: window.scrollY < 400 ? 0 : -100,
+            height: window.scrollY < 400 ? 80 : 0,
+            top: window.scrollY < 400 ? 0 : -80,
           });
         }
 
