@@ -52,9 +52,9 @@ const LANGUAGE = [
                         form: {
                             first_name: "Full Name*",
                             
-                            email: "Email*",
-                            subject: "Phone Number*",
-                            text: "Tell us about your Project*",
+                            email: "Email *",
+                            subject: "Phone Number",
+                            text: "Tell us about your Project",
                             buttonText: "Submit"
                         }
                     },

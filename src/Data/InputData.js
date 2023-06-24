@@ -8,24 +8,15 @@ export const INPUT_DATA_1 =[
 ]
 
 export const INPUT_DATA = [
-    
-    // {
-    //     name: 'last_name',
-    //     type: 'text',
-    //     placeholder: 'Last NAME',
-    //     required: true
-    // },
     {
         name: 'email',
         type: 'email',
         placeholder: 'EMAIL',
-        
     },
     {
         name: 'subject',
         type: 'text',
         placeholder: 'SUBJECT',
-        
     }
 ];
 

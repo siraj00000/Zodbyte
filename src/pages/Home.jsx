@@ -13,6 +13,33 @@ import {
 import Carousel from "../components/Carousel";
 import ScrollDown from "../components/ScrollDown";
 import TextField from "@mui/material/TextField";
+import { styled } from "@mui/material/styles";
+
+const CssTextField = styled(TextField)(({ theme }) => ({
+  "& .MuiInputBase-input": {
+    color: "#FFF", // Change the text color to white
+  },
+  "& .MuiInputLabel-root": {
+    color: "#FFF", // Change the label color to white
+  },
+  "& .MuiInput-underline:before": {
+    borderBottomColor: "#FFF", // Change the underline color to white
+  },
+  "& .MuiInputLabel-shrink": {
+    color: "#FFF", // Change the floated label color to white
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#FFF", // Change the outline color to white
+    },
+    "&:hover fieldset": {
+      borderColor: "#FFF", // Change the outline color on hover to white
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#FFF", // Change the outline color when focused to white
+    },
+  },
+}));
 
 const Home = () => {
   const { language } = useStateContext();
@@ -84,39 +111,7 @@ const Home = () => {
           />
         </div>
       </section>
-      {/* <section className="flex justify-center mx-auto w-full topbottom-spacing max-w-[1600px]">
-        <div className="font-roboto mt-[2%] md:w-full lg:w-[40%] lg:px-0 px-[5%]">
-          <h5 className="text-black font-bold text-[26px]">{section1.para1}</h5>
-          <p className="text-[36px] leading-[40px] font-bold">
-            <strong>{section1.para2}</strong>
-          </p>
-          <h6 className="font-roboto font-medium text-[21px] mt-3">
-            {section1.para3}
-          </h6>
-          <h6 className="font-roboto font-medium text-[21px] mt-5">
-            {section1.para4}
-          </h6>
-          <HashLink
-            smooth
-            to="/#contact-us"
-            className="flex items-center flex-col justify-center bg-[#D9D9D9] min-w-[332px] min-h-[74px] rounded-[15px] mx-auto mt-14 p-2"
-          >
-            <h2 className="font-[yeezy-tstar-700] text-[24px] leading-[29px]">
-              {section1.buttonTitle}
-            </h2>
-            <h6 className="font-[yeezy-tstar-700] text-[12px] leading-[15px]">
-              {section1.buttonSubTitle}
-            </h6>
-          </HashLink>
-        </div>
-        <div className="lg:block hidden">
-          <img
-            src={ZodbyteMan}
-            alt="zodbyte"
-            className="object-cover h-full float-right -mr-[60px] max-h-[700px] w-full"
-          />
-        </div>
-      </section> */}
+
       <div className="w-full   overflow-hidden">
         <section className="my-10">
           <Carousel />
@@ -126,28 +121,6 @@ const Home = () => {
       {/* Section 02 & 03 */}
       <div className="flex md:flex-col flex-col-reverse ">
         {/* In mobile version section 2 & 3 will be swaped */}
-
-        {/* Section 02, Mob section 03 */}
-        {/* <section className="bg-green-700 md:pt-2 md:pb-10 pt-14 pb-20 max-md:py-20 ">
-          <div className="max-w-[1100px] mx-auto max-lg:px-[2%]">
-            <h2 className="font-[yeezy-tstar-700] text-[32px] leading-[39px] md:text-right text-left w-full mb-3 md:mt-8 md:ml-0 max-md:ml-[18%]">
-              {section2.title}
-            </h2>
-            <div className="flex md:flex-row flex-col items-center justify-between w-full md:mt-0 mt-6">
-              <div className="w-[400px] md:m-0 ">
-                <p className="font-[yeezy-tstar-700] text-[28px] leading-[24px] md:m-0 mb-5">
-                  {section2.para1}
-                </p>
-                <p className="font-[yeezy-tstar-700] text-[28px] leading-[24px] mt-5 md:block hidden">
-                  {section2.para2}
-                </p>
-              </div>
-              <div className="flex-2 md:w-[60%] w-full">
-                <SimpleCarousel />
-              </div>
-            </div>
-          </div>
-        </section> */}
 
         {/* Section 03, Mob section 02 */}
         <section className="md:p-[5%] md:pt-[5%] max-md:py-[8%] w-full max-w-[1600px] mx-auto">
@@ -218,10 +191,10 @@ const Home = () => {
                   <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-[#191c29]   h-[90%] md:px-5 px-10 py-24    max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2  justify-between "
+                    className="bg-[#191c29] landing-page-form  h-[90%] md:px-5 px-10 py-24    max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2  justify-between "
                   >
                     {INPUT_DATA_1.map((input, index) => (
-                      <TextField
+                      <CssTextField
                         id="outlined-basic"
                         label="Full Name"
                         variant="outlined"
@@ -229,12 +202,12 @@ const Home = () => {
                         {...input}
                         value={values[input.name]}
                         onChange={onChange}
-                        className="bg-gray-300   border-black border-2 my-4"
+                        color="primary"
                       />
                     ))}
                     <div className="flex my-5 flex-wrap gap-3 lg:gap-5">
                       {INPUT_DATA.map((input, index) => (
-                        <TextField
+                        <CssTextField
                           id="outlined-basic"
                           label={section4.subSec2.form[input.name]}
                           variant="outlined"
@@ -243,12 +216,12 @@ const Home = () => {
                           placeholder={input.placeholder}
                           value={values[input.name]}
                           onChange={onChange}
-                          className="md:w-[48%]  md:px-4  my-4 bg-gray-300  "
+                          className="md:w-[48%]  md:px-4  my-4 bg-transparent"
                         />
                       ))}
                     </div>
                     {TEXTAREA_DATA.map((input, index) => (
-                      <TextField
+                      <CssTextField
                         id="outlined-multiline-static"
                         label="Tell us about your project"
                         multiline
@@ -258,7 +231,7 @@ const Home = () => {
                         {...input}
                         value={values[input.name]}
                         onChange={onChange}
-                        className="w-[100%]     bg-gray-300  "
+                        className="w-[100%] bg-transparent"
                       />
                     ))}
 
@@ -292,15 +265,6 @@ const Home = () => {
                   business, driving profound impact on your bottom line without
                   creating more work.
                 </h2>
-                {/* <h2 className="font-[yeezy-tstar-700] md:text-[50px] max-md:text-[45px] max-md:text-center text-[32px] md:leading-[66px] leading-[39px] pt-2">
-                {section4.subSec2.demoCall}
-              </h2> */}
-                {/* <p className="font-[yeezy-tstar-700] text-[21px] max-md:text-[18px] leading-[22px] max-md:text-center md:m-0 my-8 md:my-3">
-                {section4.subSec2.para}
-              </p>
-              <p className="font-[yeezy-tstar-700] text-[21px] max-md:text-[18px] leading-[22px] max-md:text-center md:m-0 mb-8 md:mt-5">
-                {section4.subSec2.para2}
-              </p> */}
               </div>
             </div>
           </div>
