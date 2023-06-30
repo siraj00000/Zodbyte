@@ -15,13 +15,9 @@ https://nortal.com/
 # Form send to
 zodbyte@gmail.com
 
-# Requirements
-1- humburger Icon
-2- lang converter in the menu
-3- lang drop should have width auto
-4- image should be zoom from anywhere over hover
-5- form should match calendy
-6- add email on which info will be sent
-7- calendy title should be center
-8- from the header the items should nav to related sections
-9- header animation (disappear on scroll down when it passes the hero section, appear on scroll up at any point)
+# Changes
+- switch css effect background with footer background (where statues and container are etc)
+- add a second picture to confirm slideshow effect on the review side
+- add white underline/outline on navbar as seen on Figma design (thing white line is under the statue of navbar)
+- make the email container on same top level as Calendly
+- add the shadow from the code that I sent, to the statue

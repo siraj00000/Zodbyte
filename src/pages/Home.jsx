@@ -171,7 +171,7 @@ const Home = () => {
       <section className="pt-[30px] bg-[#212534] gap-10 w-full">
         <div id="contact-us" className="h-10"></div>
         <div className="max-w-7xl p-2 mx-auto">
-          <div className="flex flex-wrap md:flex-row flex-col  items-top justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-7xl px-4 py-8 mx-auto">
+          <div className="flex flex-wrap md:flex-row flex-col  items-start justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-7xl px-4 py-8 mx-auto">
             <div className="flex-1  mx-auto h-auto ">
               <h2 className="font-[yeezy-tstar-700] text-white md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
                 {section4.subSec1.title}
