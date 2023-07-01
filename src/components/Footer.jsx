@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <>
     {/* <WaveSection/> */}
-    <StripeGradient/>
     <footer className="">
+    <StripeGradient/>
       <section className="md:block hidden w-full md:px-[8%] pt-[39px] pb-10 justify-center relative overflow-hidden
-      bg-[#5E6C8C]">
+      b">
          {/* Footer Color above */}
 
         <div className="flex w-full justify-center gap-4">
@@ -57,7 +57,8 @@ const Footer = () => {
           <img className="h-40 transform -scale-x-100" src={statue1} alt="" />
         </div>
       </section>
-      <section className="max-md:block hidden px-[8%] py-10 w-full relative overflow-hidden bg-[#5E6C8C]">
+      <section className="max-md:block hidden px-[8%] py-10 w-full relative overflow-hidden ">
+      <StripeGradient/>
         <h6 className="font-[yeezy-tstar-700] text-[32px] leading-[39px] ml-10 z-10">
           @zodbyte2k22
         </h6>

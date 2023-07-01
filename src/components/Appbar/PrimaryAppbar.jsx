@@ -12,7 +12,7 @@ const PrimaryAppbar = (props) => {
   return (
     <animated.header
       {...props}
-      className="fixed w-full z-50 bg-white"
+      className="fixed w-full z-50 bg-white border-b-2 border-white"
     >
       <nav className="flex md:items-center  lg:max-w-full items-start md:flex-row w-full shadow-md  lg:px-[24px]  h-[100%] bg-white">
         {/* brand */}
