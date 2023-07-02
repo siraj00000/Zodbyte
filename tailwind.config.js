@@ -15,6 +15,9 @@ module.exports = {
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
       'tesla':['TESLA',],
+    },
+    color: {
+      yellowSecondary: "rgb(231, 182, 73);"
     }
   },
   plugins: ['postcss-import',

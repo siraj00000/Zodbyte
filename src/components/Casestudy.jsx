@@ -2,7 +2,7 @@ import React from "react";
 
 const Casestudy = (props) => {
   return (
-    <div className="flex items-center max-w-7xl md:max-h-[700px] h-full py-10 w-full bg-slate-500 relative">
+    <div className={`${props.bgColor} flex items-center max-w-7xl md:max-h-[700px] h-full py-10 w-full relative`}>
       <div className="flex w-[90%] flex-col h-[90%] my-auto mx-auto md:flex-row max-md:py-8 max-w-6xl">
         <div className="w-[5%]"></div>
         <div className="h-[20%] w-[30%] md:w-[30%] md:h-full flex items-center mr-4 relative justify-center flex-row">

@@ -112,7 +112,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="w-full   overflow-hidden">
+      <div className="w-full overflow-hidden">
         <section className="my-10">
           <Carousel />
           {/* <div className='absolute top-1/2 left-[43.333%] z-50  '><p className="text-white  font-[yeezy-tstar-700] font-bold text-4xl shadow-lg">Updated Soon</p> </div> */}
