@@ -8,7 +8,7 @@ function StripeGradient() {
         gradient.initGradient('#gradient-canvas')
     }, [])
   return (
-    <div className='h-64'>
+    <div className='md:h-[26rem] h-full w-full absolute'>
         <canvas id="gradient-canvas"></canvas>
     </div>
   )

@@ -7,7 +7,7 @@ const Casestudy = (props) => {
         <div className="w-[5%]"></div>
         <div className="h-[20%] w-[30%] md:w-[30%] md:h-full flex items-center mr-4 relative justify-center flex-row">
           <img
-            className="md:w-2/5 h-40  md:h-[90%]"
+            className="md:w-2/5 h-40 md:h-[90%]"
             src={props.img}
             alt=""
           />
@@ -36,7 +36,7 @@ const Casestudy = (props) => {
           </div>
         </div>
       </div>
-      <p className="absolute -left-8 top-[27%] rotate-[270deg] font-[yeezy-tstar-700]">
+      <p className="absolute md:-left-8 left-64 md:top-[27%] top-[15%] md:rotate-[270deg] rotate-90 font-[yeezy-tstar-700]">
         What people are saying
       </p>
     </div>

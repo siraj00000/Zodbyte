@@ -171,9 +171,17 @@ const Home = () => {
       <section className="pt-[30px] bg-[#212534] gap-10 w-full">
         <div id="contact-us" className="h-10"></div>
         <div className="max-w-7xl p-2 mx-auto">
-          <div className="flex flex-wrap md:flex-row flex-col  items-start justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-7xl px-4 py-8 mx-auto">
+          <div className="w-full md:flex hidden">
+              <div className="px-4 w-1/2"><h2 className="font-[yeezy-tstar-700] text-white md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
+                {section4.subSec1.title}
+              </h2></div>
+              <div className="w-1/2 px-4"><h2 className="font-[yeezy-tstar-700] text-white mb-9 md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5">
+                  {section4.subSec2.formtitle}
+                </h2></div>
+          </div>
+          <div className="flex flex-wrap md:flex-row flex-col relative items-start justify-center gap-10 w-full 2xl:max-w-[1400px] max-w-7xl px-4 py-8 mx-auto">
             <div className="flex-1  mx-auto h-auto ">
-              <h2 className="font-[yeezy-tstar-700] text-white md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full">
+              <h2 className="font-[yeezy-tstar-700] text-white md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 w-full block md:hidden">
                 {section4.subSec1.title}
               </h2>
               <div className="bg-[#283241] overflow-hidden  p-2 rounded-lg max-h-[870px] md:max-h-[870px] lg:max-h-[850px] contact-card">
@@ -182,16 +190,16 @@ const Home = () => {
             </div>
             <div className="w-full border-t-[1px] my-2 md:hidden block"></div>
             <div className="flex-1 w-full max-md:px-[8%]">
-              <div className="h-[70%]">
-                <h2 className="font-[yeezy-tstar-700] text-white mb-9 md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5">
+              <div className="h-full">
+                <h2 className="font-[yeezy-tstar-700] text-white mb-9 md:text-[34px] max-md:text-[30px] md:leading-[36px] leading-[39px] max-md:text-center pb-5 block md:hidden">
                   {section4.subSec2.formtitle}
                 </h2>
 
-                <div className="bg-[#283241] flex justify-center items-center p-2 min-h-4xl rounded-lg contact-card">
+                <div className="bg-[#283241] flex justify-center items-center p-2 min-h-4xl rounded-lg contact-card h-full">
                   <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-[#191c29] landing-page-form  h-[90%] md:px-5 px-10 py-24    max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2  justify-between "
+                    className="bg-[#191c29] landing-page-form h-full md:px-5 px-10 py-24 max-md:py-14 flex flex-1 flex-col gap-0 max-md:gap-2 justify-between "
                   >
                     {INPUT_DATA_1.map((input, index) => (
                       <CssTextField
@@ -236,7 +244,7 @@ const Home = () => {
                     ))}
 
                     <div class="cont w-[100px] md:w-[310px]">
-                      <button class="submit-btn mx-auto left-0 right-0 my-4">
+                      <button class="submit-btn mx-auto left-auto md:left-0 right-0 my-4">
                         <span>Submit</span>
                         <img
                           class="submit-img"
@@ -252,7 +260,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="h-8"></div>
-              <div className="h-[30%]">
+              <div className="">
                 <h2 className="font-[Alpina] text-white md:text-[20px] max-md:text-[18px] max-md:text-center text-[20px] md:leading-[22px] leading-[22px]">
                   We’re not just a marketing agency. We’re an extension of your
                   team that integrates seamlessly with the other arms of your
